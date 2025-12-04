@@ -7,6 +7,7 @@ def greet():
     data = request.get_json()
     # BUG: Missing null check - will raise KeyError if 'name' is missing
     # comment for fixing
+    # One more change here
     name = data['name']
     return jsonify({'message': f'Hello, {name}!'})
 
