@@ -6,7 +6,7 @@ app = Flask(__name__)
 def greet():
     data = request.get_json()
     # BUG: Missing null check - will raise KeyError if 'name' is missing
-    # comment for fixing
+    # New branch and trying a PR
     name = data['name']
     return jsonify({'message': f'Hello, {name}!'})
 
